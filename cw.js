@@ -2,4 +2,4 @@ function foo() {
     return 'Hello World'
 }
 
-module.exports = foo;
+module.exports = {foo};
