@@ -1,7 +1,7 @@
 # CW.js
 
-![NPM](https://img.shields.io/npm/v/cw)
-![Node.js CI](https://github.com/mastercw/cw.js/workflows/Node.js%20CI/badge.svg)
+[![Node.js CI](https://github.com/mastercw/cw.js/workflows/Node.js%20CI/badge.svg)](https://github.com/mastercw/cw.js/actions)
+[![NPM](https://img.shields.io/npm/v/cw)](https://www.npmjs.com/package/cw)
 
 A comprehensive Morse Code (CW) library
 
