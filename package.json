@@ -1,8 +1,8 @@
 {
   "name": "cw",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A comprehensive Morse Code (CW) library",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "mocha",
     "format": "prettier --write **/*.js",
