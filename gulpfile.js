@@ -10,13 +10,13 @@ gulp.task("build", function () {
     standalone: "cw",
   })
     .bundle()
-    .pipe(source("bundle.js"))
+    .pipe(source("cw.js"))
     .pipe(gulp.dest("dist/"));
 });
 
 gulp.task("terse", function () {
   return gulp
-    .src("dist/bundle.js")
+    .src("dist/cw.js")
     .pipe(terser())
     .pipe(rename({ extname: ".min.js" }))
     .pipe(gulp.dest("dist/"));
