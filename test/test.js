@@ -2,18 +2,20 @@ var cw = require('../cw');
 
 var assert = require('assert');
 
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1, 2, 3].indexOf(4), -1);
-    });
-  });
-});
+describe('cw', function() {
+    describe('#tdit()', function() {
+        it('should calculate the correct dit length in ms', function() {
+            assert.equal(cw.tdit(20), 0.06);
+            assert.equal(cw.tdit(50), 0.024);
+        });
+    })
+})
 
 describe('cw', function() {
-    describe('#foo()', function() {
-        it('should return hello world', function() {
-            assert.equal(cw.foo(), 'Hello World');
+    describe('#tfdit()', function() {
+        it('should calculate the correct farnsworth dit length in ms', function() {
+            assert.equal(cw.tfdit(20, 10), 0.21789473684210525);
+            assert.equal(cw.tfdit(20, 20), 0.06);
         })
     })
 })
