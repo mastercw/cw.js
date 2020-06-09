@@ -1,0 +1,26 @@
+{
+  "name": "cw",
+  "version": "1.0.0",
+  "description": "A comprehensive Morse Code (CW) library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mastercw/cw.js.git"
+  },
+  "keywords": [
+    "morse",
+    "code",
+    "cw",
+    "continuous",
+    "wave"
+  ],
+  "author": "Yuval Adam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mastercw/cw.js/issues"
+  },
+  "homepage": "https://github.com/mastercw/cw.js#readme"
+}
