@@ -11,7 +11,7 @@ INTRA_WORD_SPACING = 4; // Actually 7, but we always add the inter-word spacing 
 function initAudioContext(toneFreq) {
   if (window === undefined) return;
 
-  const toneFreq = toneFreq || DEFAULT_TONE_FREQUENCY;
+  let tone = toneFreq || DEFAULT_TONE_FREQUENCY;
 
   let actx = new (window.AudioContext || window.webkitAudioContext)();
   let osc = actx.createOscillator();
@@ -20,7 +20,7 @@ function initAudioContext(toneFreq) {
   gain.connect(actx.destination);
 
   gain.gain.value = 0;
-  osc.frequency.value = toneFreq;
+  osc.frequency.value = tone;
 
   osc.connect(gain);
   osc.start();
@@ -42,7 +42,7 @@ function playWord(actx, gain, word, td, tfd) {
       continue;
     }
 
-    let c = codes[w];
+    let c = codes[w.toUpperCase()];
 
     for (var j = 0; j < c.length; j++) {
       let l = c[j] == "-" ? td * DAH_LENGTH : td;

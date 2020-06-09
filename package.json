@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha",
     "format": "prettier --write **/*.js",
-    "formatcheck": "prettier --check **/*.js"
+    "formatcheck": "prettier --check **/*.js",
+    "build": "browserify --standalone cw --entry src/index.js --outfile examples/bundle.js"
   },
   "repository": {
     "type": "git",
