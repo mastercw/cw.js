@@ -7,7 +7,7 @@
     "test": "mocha",
     "format": "prettier --write **/*.js",
     "formatcheck": "prettier --check **/*.js",
-    "build": "browserify --standalone cw --entry src/index.js --outfile examples/bundle.js"
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,10 @@
   "homepage": "https://github.com/mastercw/cw.js#readme",
   "devDependencies": {
     "browserify": "^16.5.1",
+    "gulp": "^4.0.2",
     "mocha": "^7.2.0",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "uglify-js": "^3.9.4",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
