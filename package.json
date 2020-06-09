@@ -4,7 +4,7 @@
   "description": "A comprehensive Morse Code (CW) library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/mastercw/cw.js/issues"
   },
-  "homepage": "https://github.com/mastercw/cw.js#readme"
+  "homepage": "https://github.com/mastercw/cw.js#readme",
+  "devDependencies": {
+    "mocha": "^7.2.0"
+  }
 }
