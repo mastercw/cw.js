@@ -8,5 +8,6 @@ gulp.task("build", function () {
   })
     .bundle()
     .pipe(source("bundle.js"))
+    .pipe(gulp.dest("dist/"))
     .pipe(gulp.dest("examples/"));
 });
