@@ -1,4 +1,4 @@
-var cw = require("../cw");
+var cw = require("../src");
 
 var assert = require("assert");
 
@@ -17,6 +17,16 @@ describe("cw", function () {
       assert.equal(cw.tfdit(20, 10), 0.21789473684210525);
       assert.equal(cw.tfdit(20, 20), 0.06);
       assert.equal(cw.tfdit(20), 0.06);
+    });
+  });
+});
+
+describe("cw", function () {
+  describe("#codes", function () {
+    it("should provide an object mapping characters to morse code", function () {
+      assert.equal(cw.codes["C"], "-.-.");
+      assert.equal(cw.codes["8"], "---..");
+      assert.equal(cw.codes["."], ".-.-.-");
     });
   });
 });
