@@ -1,0 +1,17 @@
+h1 {
+  color: red;
+}
+
+.dit::before {
+  content: "\25cf";
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+.dah::after {
+  content: "\25ac";
+  position: relative;
+  top: -0.13em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
