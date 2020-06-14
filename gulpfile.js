@@ -6,7 +6,7 @@ const rename = require("gulp-rename");
 const source = require("vinyl-source-stream");
 
 gulp.task("build", function () {
-  return browserify("src/index.js", {
+  return browserify("src/entry.js", {
     standalone: "cw",
     transform: "browserify-css",
   })
