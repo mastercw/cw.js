@@ -8,6 +8,7 @@ const source = require("vinyl-source-stream");
 gulp.task("build", function () {
   return browserify("src/index.js", {
     standalone: "cw",
+    transform: "browserify-css",
   })
     .bundle()
     .pipe(source("cw.js"))

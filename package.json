@@ -28,6 +28,7 @@
   "homepage": "https://github.com/mastercw/cw.js",
   "devDependencies": {
     "browserify": "^16.5.1",
+    "browserify-css": "^0.15.0",
     "gulp": "^4.0.2",
     "gulp-rename": "^2.0.0",
     "gulp-terser": "^1.2.0",
