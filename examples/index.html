@@ -6,11 +6,15 @@
   <body>
     <script src="cw.min.js"></script>
     <script>
-      var actx = cw.initAudioContext(700);
-      var td = cw.tdit(20);
-      var tfd = cw.tfdit(20, 10);
-      cw.playWord(actx.actx, actx.gain, "hello", td, tfd);
+      function play() {
+        var actx = cw.initAudioContext(700);
+        var td = cw.tdit(20);
+        var tfd = cw.tfdit(20, 10);
+        cw.playWord(actx.actx, actx.gain, "hello", td, tfd);
+      }
     </script>
-    <h1>Hello</h1>
+    <button onClick="play()" value="Play">Play</button>
+    <span class="dit"></span><span class="dah"></span><span class="dah"></span
+    ><span class="dit"></span>
   </body>
 </html>
