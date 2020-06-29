@@ -34,7 +34,8 @@
     "@rollup/plugin-node-resolve": "^8.1.0",
     "mocha": "^7.2.0",
     "prettier": "^2.0.5",
-    "rollup": "^2.16.1"
+    "rollup": "^2.16.1",
+    "rollup-plugin-terser": "^6.1.0"
   },
   "files": [
     "dist"
