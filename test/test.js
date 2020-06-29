@@ -1,4 +1,4 @@
-var cw = require("../src");
+var cw = require("..");
 
 var assert = require("assert");
 
