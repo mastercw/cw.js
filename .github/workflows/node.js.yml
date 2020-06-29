@@ -24,4 +24,4 @@ jobs:
       - run: npm run build --if-present
       - run: npm test
       - run: npm run formatcheck
-      - run: npm run gulp
+      - run: npm run build
