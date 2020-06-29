@@ -28,7 +28,7 @@ You can either build the browser bundle yourself with:
 
 ```bash
 $ npm install
-$ npm run gulp
+$ npm run build
 ```
 
 Which will create `dist/cw.js` and `dist/cw.min.js`. Or you can just use it from a CDN:
@@ -45,7 +45,7 @@ Once the script is loaded you can call the `cw.play()` function:
 </script>
 ```
 
-Some options are allowed to customize the played sequence:
+Options can be passed to customize the played sequence:
 
 ```js
 cw.play("abcd", {
@@ -58,15 +58,20 @@ cw.play("abcd", {
 In cases of multiple plays, it is recommended to create a global `audioContext` object:
 
 ```js
-let actx = cw.initAudioContext({
-  tone: 600,
-});
-cw.play("abcd", { actx });
-cw.play("efgh", { actx });
-cw.play("ijkl", { actx });
+let actx = cw.initAudioContext({ tone: 600 }); // tone is passed here
+
+cw.play("abcd", { actx, wpm: 10 });
+cw.play("efgh", { actx, wpm: 20 });
+cw.play("ijkl", { actx, wpm: 30 });
 ```
 
 For more examples see the [examples/](examples/) directory.
+
+### Testing
+
+```bash
+$ npm test
+```
 
 ## License
 
