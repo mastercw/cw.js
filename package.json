@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/mastercw/cw.js/issues"
   },
-  "homepage": "https://github.com/mastercw/cw.js",
+  "homepage": "https://www.mastercw.com/cw.js/",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
