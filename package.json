@@ -4,7 +4,7 @@
   "description": "A comprehensive Morse Code (CW) library",
   "main": "dist/cw.cjs.js",
   "module": "dist/cw.esm.js",
-  "browser": "dist/cw.umd.js",
+  "browser": "dist/cw.min.js",
   "scripts": {
     "test": "mocha",
     "format": "prettier --write **/*.js",

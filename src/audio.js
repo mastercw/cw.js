@@ -1,6 +1,10 @@
 import { codes } from "./codes";
+import { tdit, tfdit } from "./timings";
 
 const DEFAULT_TONE_FREQUENCY = 700;
+const DEFAULT_WPM = 20;
+const DEFAULT_FWPM = 10;
+
 const START_DELAY = 0.5;
 const TRANSITION_PERIOD = 0.002;
 
@@ -8,10 +12,10 @@ const DAH_LENGTH = 3;
 const INTER_WORD_SPACING = 3;
 const INTRA_WORD_SPACING = 4; // Actually 7, but we always add the inter-word spacing (3) so 7-3=4
 
-function initAudioContext(toneFreq) {
+function initAudioContext(opts = {}) {
   if (window === undefined) return;
 
-  let tone = toneFreq || DEFAULT_TONE_FREQUENCY;
+  let tone = opts.tone || DEFAULT_TONE_FREQUENCY;
 
   let actx = new (window.AudioContext || window.webkitAudioContext)();
   let osc = actx.createOscillator();
@@ -32,8 +36,16 @@ function initAudioContext(toneFreq) {
   };
 }
 
-function playWord(actx, gain, word, td, tfd) {
+function play(word, opts = {}) {
+  let ctx = opts.actx || initAudioContext(opts);
+  let { actx, gain } = ctx;
+
   let ct = actx.currentTime;
+  const wpm = opts.wpm || DEFAULT_WPM;
+  const fwpm = opts.fwpm || DEFAULT_FWPM;
+  const td = tdit(wpm);
+  const tfd = tfdit(wpm, fwpm);
+
   let t = ct + START_DELAY;
   for (let i = 0; i < word.length; i++) {
     let w = word[i];
@@ -56,4 +68,4 @@ function playWord(actx, gain, word, td, tfd) {
   return t * 1000;
 }
 
-export { initAudioContext, playWord };
+export { initAudioContext, play };

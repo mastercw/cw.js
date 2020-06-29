@@ -5,14 +5,10 @@
   </head>
   <body>
     <script src="cw.min.js"></script>
-    <script>
-      var actx = cw.initAudioContext(700);
-      var td = cw.tdit(20);
-      var tfd = cw.tfdit(20, 10);
-    </script>
-    <h1>Hello</h1>
-    <button onclick="cw.playWord(actx.actx, actx.gain, 'hello', td, tfd)">
-      Hello
+    <h1>Basic usage</h1>
+    <input id="word" type="text" value="Hello world" />
+    <button onclick="cw.play(document.querySelector('#word').value)">
+      Play
     </button>
   </body>
 </html>
