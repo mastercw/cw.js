@@ -37,15 +37,33 @@ Which will create `dist/cw.js` and `dist/cw.min.js`. Or you can just use it from
 <script src="https://cdn.example.com/cw.min.js"></script>
 ```
 
-Once the script is loaded you can call it with a typical usage:
+Once the script is loaded you can call the `cw.play()` function:
 
 ```html
 <script>
-  var actx = cw.initAudioContext(700);
-  var td = cw.tdit(20);
-  var tfd = cw.tfdit(20, 10);
-  cw.playWord(actx.actx, actx.gain, "hello", td, tfd);
+  cw.play("hello world");
 </script>
+```
+
+Some options are allowed to customize the played sequence:
+
+```js
+cw.play("abcd", {
+  tone: 800, // tone frequency in Hz
+  wpm: 20, // character speed in words per minute (WPM)
+  fwpm: 10, // farnsworth speed in words per minute (WPM)
+});
+```
+
+In cases of multiple plays, it is recommended to create a global `audioContext` object:
+
+```js
+let actx = cw.initAudioContext({
+  tone: 600,
+});
+cw.play("abcd", { actx });
+cw.play("efgh", { actx });
+cw.play("ijkl", { actx });
 ```
 
 For more examples see the [examples/](examples/) directory.
