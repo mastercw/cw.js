@@ -9,8 +9,10 @@
       var actx = cw.initAudioContext(700);
       var td = cw.tdit(20);
       var tfd = cw.tfdit(20, 10);
-      cw.playWord(actx.actx, actx.gain, "hello", td, tfd);
     </script>
     <h1>Hello</h1>
+    <button onclick="cw.playWord(actx.actx, actx.gain, 'hello', td, tfd)">
+      Hello
+    </button>
   </body>
 </html>
