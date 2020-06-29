@@ -1,12 +1,12 @@
-const { codes } = require("./codes");
+import { codes } from "./codes";
 
-DEFAULT_TONE_FREQUENCY = 700;
-START_DELAY = 0.5;
-TRANSITION_PERIOD = 0.002;
+const DEFAULT_TONE_FREQUENCY = 700;
+const START_DELAY = 0.5;
+const TRANSITION_PERIOD = 0.002;
 
-DAH_LENGTH = 3;
-INTER_WORD_SPACING = 3;
-INTRA_WORD_SPACING = 4; // Actually 7, but we always add the inter-word spacing (3) so 7-3=4
+const DAH_LENGTH = 3;
+const INTER_WORD_SPACING = 3;
+const INTRA_WORD_SPACING = 4; // Actually 7, but we always add the inter-word spacing (3) so 7-3=4
 
 function initAudioContext(toneFreq) {
   if (window === undefined) return;
@@ -56,4 +56,4 @@ function playWord(actx, gain, word, td, tfd) {
   return t * 1000;
 }
 
-module.exports = { initAudioContext, playWord };
+export { initAudioContext, playWord };

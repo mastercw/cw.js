@@ -1,13 +1,16 @@
 {
   "name": "cw",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A comprehensive Morse Code (CW) library",
-  "main": "src/index.js",
+  "main": "dist/cw.cjs.js",
+  "module": "dist/cw.esm.js",
+  "browser": "dist/cw.umd.js",
   "scripts": {
     "test": "mocha",
     "format": "prettier --write **/*.js",
     "formatcheck": "prettier --check **/*.js",
-    "rollup": "rollup"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -27,8 +30,13 @@
   },
   "homepage": "https://github.com/mastercw/cw.js",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
     "mocha": "^7.2.0",
     "prettier": "^2.0.5",
     "rollup": "^2.16.1"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

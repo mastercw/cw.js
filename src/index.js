@@ -1,5 +1,5 @@
-const { tdit, tfdit } = require("./timings");
-const { codes } = require("./codes");
-const { initAudioContext, playWord } = require("./audio");
+import { tdit, tfdit } from "./timings";
+import { codes } from "./codes";
+import { initAudioContext, playWord } from "./audio";
 
-module.exports = { tdit, tfdit, codes, initAudioContext, playWord };
+export { tdit, tfdit, codes, initAudioContext, playWord };

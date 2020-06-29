@@ -42,4 +42,4 @@ const codes = {
   "?": "..--..",
 };
 
-module.exports = { codes };
+export { codes };
