@@ -31,10 +31,10 @@ $ npm install
 $ npm run build
 ```
 
-Which will create `dist/cw.js` and `dist/cw.min.js`. Or you can just use it from a CDN:
+Which will create `dist/cw.js` and `dist/cw.min.js`. Or you can just use it from our CDN:
 
 ```html
-<script src="https://cdn.example.com/cw.min.js"></script>
+<script src="https://cwjs.mastercw.com/cw.min.js"></script>
 ```
 
 Once the script is loaded you can call the `cw.play()` function:
