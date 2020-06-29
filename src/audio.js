@@ -35,7 +35,7 @@ function initAudioContext(toneFreq) {
 function playWord(actx, gain, word, td, tfd) {
   let ct = actx.currentTime;
   let t = ct + START_DELAY;
-  for (var i = 0; i < word.length; i++) {
+  for (let i = 0; i < word.length; i++) {
     let w = word[i];
     if (w == " ") {
       t += tfd * INTRA_WORD_SPACING;
@@ -44,7 +44,7 @@ function playWord(actx, gain, word, td, tfd) {
 
     let c = codes[w.toUpperCase()];
 
-    for (var j = 0; j < c.length; j++) {
+    for (let j = 0; j < c.length; j++) {
       let l = c[j] == "-" ? td * DAH_LENGTH : td;
       gain.gain.setTargetAtTime(1, t, TRANSITION_PERIOD);
       gain.gain.setTargetAtTime(0, t + l, TRANSITION_PERIOD);
