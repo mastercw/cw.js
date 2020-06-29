@@ -1,6 +1,6 @@
 {
   "name": "cw",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A comprehensive Morse Code (CW) library",
   "main": "dist/cw.cjs.js",
   "module": "dist/cw.esm.js",
