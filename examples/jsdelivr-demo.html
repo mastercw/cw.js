@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cw.js - jsDelivr Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>cw.js - Morse Code Library</h1>
+    <p>This demo shows how to use the cw.js library via jsDelivr CDN.</p>
+
+    <h2>Example 1: Calculate Timing</h2>
+    <pre>// Calculate dit length at 20 WPM
+const ditLength = cw.tdit(20);
+console.log(`Dit length at 20 WPM: ${ditLength} seconds`);
+
+// Calculate Farnsworth dit length at 20 WPM with character speed of 10 WPM
+const farnsworthDitLength = cw.tfdit(20, 10);
+console.log(`Farnsworth dit length: ${farnsworthDitLength} seconds`);</pre>
+
+    <button id="runTimingExample">Run Timing Example</button>
+    <div id="timingResult" class="result"></div>
+
+    <h2>Example 2: Morse Code Mapping</h2>
+    <pre>// Get morse code for a character
+const morseC = cw.codes["C"];
+console.log(`Morse code for 'C': ${morseC}`);
+
+// Get morse code for a number
+const morse8 = cw.codes["8"];
+console.log(`Morse code for '8': ${morse8}`);</pre>
+
+    <button id="runMappingExample">Run Mapping Example</button>
+    <div id="mappingResult" class="result"></div>
+
+    <h2>Example 3: Play Morse Code</h2>
+    <p>Click the button to play "CQ" in Morse code:</p>
+    <button id="playMorse">Play CQ</button>
+
+    <h2>How to Include cw.js in Your Project</h2>
+    <h3>Via jsDelivr CDN:</h3>
+    <pre>&lt;script src="https://cdn.jsdelivr.net/npm/cw@0.3.0/dist/cw.min.js"&gt;&lt;/script&gt;</pre>
+
+    <h3>Via npm:</h3>
+    <pre>npm install cw</pre>
+
+    <h3>ES Module Import:</h3>
+    <pre>import { tdit, tfdit, codes, initAudioContext, play } from 'cw';</pre>
+
+    <!-- Include the library from jsDelivr -->
+    <script src="https://cdn.jsdelivr.net/npm/cw@0.3.0/dist/cw.min.js"></script>
+
+    <script>
+        // Initialize audio context
+        cw.initAudioContext();
+
+        // Timing example
+        document.getElementById('runTimingExample').addEventListener('click', function () {
+            const ditLength = cw.tdit(20);
+            const farnsworthDitLength = cw.tfdit(20, 10);
+
+            document.getElementById('timingResult').innerHTML =
+                `Dit length at 20 WPM: ${ditLength} seconds<br>` +
+                `Farnsworth dit length: ${farnsworthDitLength} seconds`;
+        });
+
+        // Mapping example
+        document.getElementById('runMappingExample').addEventListener('click', function () {
+            const morseC = cw.codes["C"];
+            const morse8 = cw.codes["8"];
+
+            document.getElementById('mappingResult').innerHTML =
+                `Morse code for 'C': ${morseC}<br>` +
+                `Morse code for '8': ${morse8}`;
+        });
+
+        // Play example
+        document.getElementById('playMorse').addEventListener('click', function () {
+            // Play "CQ" in Morse code (-.-.  --.-) at 20 WPM
+            cw.play("-.-.  --.-", 20);
+        });
+    </script>
+</body>
+
+</html>

@@ -31,7 +31,15 @@ $ npm install
 $ npm run build
 ```
 
-Which will create `dist/cw.js` and `dist/cw.min.js`. Or you can just use it from our CDN:
+Which will create `dist/cw.js` and `dist/cw.min.js`. Or you can use it from a CDN:
+
+#### jsDelivr CDN (Recommended)
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/cw@0.3.0/dist/cw.min.js"></script>
+```
+
+#### Legacy CDN
 
 ```html
 <script src="https://cwjs.mastercw.com/cw.min.js"></script>
