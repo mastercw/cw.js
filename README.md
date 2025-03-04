@@ -47,7 +47,7 @@ or just use `latest`:
 
 #### Legacy CDN
 
-Serving version 0.2.1 for backwards compatability:
+The legacy CDN is still available for backwards compatability but will be deprecated soon:
 
 ```html
 <script src="https://cwjs.mastercw.com/cw.min.js"></script>
