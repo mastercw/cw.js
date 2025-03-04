@@ -14,7 +14,8 @@ function tdit(wpm: number): number {
  * @returns Farnsworth dit length in seconds
  */
 function tfdit(wpm: number, fwpm?: number): number {
-  const effectiveFwpm = fwpm || wpm;
+  // Ensure fwpm defaults to wpm when undefined or null
+  const effectiveFwpm = fwpm === undefined ? wpm : fwpm;
   return (300 * wpm - 186 * effectiveFwpm) / (95 * wpm * effectiveFwpm);
 }
 
