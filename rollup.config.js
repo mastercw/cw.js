@@ -1,8 +1,11 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
-import { terser } from "rollup-plugin-terser";
-import pkg from "./package.json" assert { type: "json" };
+import terser from "@rollup/plugin-terser";
+import { readFileSync } from 'fs';
+
+// Read package.json
+const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8'));
 
 export default [
   {
@@ -14,8 +17,8 @@ export default [
       sourcemap: true,
     },
     plugins: [
-      resolve(), 
-      commonjs(), 
+      resolve(),
+      commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       terser()
     ],
