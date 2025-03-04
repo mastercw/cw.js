@@ -10,12 +10,9 @@
   "scripts": {
     "test": "mocha --require ts-node/register --loader=ts-node/esm test/**/*.ts",
     "format": "prettier --write \"**/*.{ts,js,json}\"",
-    "formatcheck": "prettier --check \"**/*.{ts,js,json}\"",
-    "lint": "eslint src/**/*.ts",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "typecheck": "tsc --noEmit",
-    "clean": "rimraf dist"
+    "clean": "rm -rf dist"
   },
   "repository": {
     "type": "git",
@@ -41,14 +38,9 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/chai": "^4.3.11",
     "@types/mocha": "^10.0.6",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
-    "@typescript-eslint/parser": "^7.0.2",
     "chai": "^4.3.10",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
     "mocha": "^10.2.0",
     "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
     "rollup": "^4.9.6",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
