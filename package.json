@@ -48,5 +48,7 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "jsdelivr": "dist/cw.min.js",
+  "unpkg": "dist/cw.min.js"
 }
