@@ -3,7 +3,7 @@
 [![Node.js CI](https://github.com/mastercw/cw.js/workflows/Node.js%20CI/badge.svg)](https://github.com/mastercw/cw.js/actions)
 [![NPM](https://img.shields.io/npm/v/cw)](https://www.npmjs.com/package/cw)
 
-A comprehensive Morse Code (CW) library
+A comprehensive Morse Code (CW) library, brought to you by [Master CW](https://www.mastercw.com/).
 
 ## Usage
 
@@ -39,7 +39,15 @@ Which will create `dist/cw.js` and `dist/cw.min.js`. Or you can use it from a CD
 <script src="https://cdn.jsdelivr.net/npm/cw@0.3.0/dist/cw.min.js"></script>
 ```
 
+or just use `latest`:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/cw@latest/dist/cw.min.js"></script>
+```
+
 #### Legacy CDN
+
+Serving version 0.2.1 for backwards compatability:
 
 ```html
 <script src="https://cwjs.mastercw.com/cw.min.js"></script>
