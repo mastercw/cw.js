@@ -1,5 +1,5 @@
-import { tdit, tfdit } from "./timings";
-import { codes } from "./codes";
-import { initAudioContext, play, AudioContext } from "./audio";
+import { tdit, tfdit } from "./timings.js";
+import { codes } from "./codes.js";
+import { initAudioContext, play } from "./audio.js";
 
-export { tdit, tfdit, codes, initAudioContext, play, AudioContext };
+export { tdit, tfdit, codes, initAudioContext, play };

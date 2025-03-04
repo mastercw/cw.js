@@ -1,5 +1,5 @@
-import { codes } from "./codes";
-import { tdit, tfdit } from "./timings";
+import { codes } from "./codes.js";
+import { tdit, tfdit } from "./timings.js";
 
 const DEFAULT_TONE_FREQUENCY = 700;
 const DEFAULT_WPM = 20;
@@ -63,7 +63,7 @@ function initAudioContext(opts: AudioContextOptions = {}): AudioContextResult | 
 function play(word: string, opts: AudioContextOptions = {}): number {
   const ctx = opts.actx || initAudioContext(opts);
   if (!ctx) return 0;
-  
+
   const { actx, gain } = ctx;
 
   const ct = actx.currentTime;
@@ -95,4 +95,4 @@ function play(word: string, opts: AudioContextOptions = {}): number {
   return t * 1000;
 }
 
-export { initAudioContext, play, AudioContext };
+export { initAudioContext, play };
