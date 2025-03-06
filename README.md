@@ -15,9 +15,7 @@ Install the package via `npm` or `yarn`:
 $ npm install cw
 ```
 
-You can use it in two ways:
-
-#### Default Import (Recommended)
+#### ES Modules
 
 ```javascript
 import cw from "cw";
@@ -25,15 +23,7 @@ console.log(cw.codes["C"]); // "-.-."
 cw.play("hello world");
 ```
 
-#### Named Imports (For tree-shaking)
-
-```javascript
-import { codes, play } from "cw";
-console.log(codes["C"]); // "-.-."
-play("hello world");
-```
-
-For CommonJS environments:
+#### CommonJS
 
 ```javascript
 const cw = require("cw");
@@ -99,19 +89,6 @@ let actx = cw.initAudioContext({ tone: 600 }); // tone is passed here
 cw.play("abcd", { actx, wpm: 10 });
 cw.play("efgh", { actx, wpm: 20 });
 cw.play("ijkl", { actx, wpm: 30 });
-```
-
-For ES module environments, you can use the default import:
-
-```js
-import cw from 'cw';
-
-// Initialize audio context once
-let actx = cw.initAudioContext({ tone: 600 });
-
-// Use the cw object for all operations
-cw.play("abcd", { actx, wpm: 10 });
-console.log(cw.codes["C"]); // "-.-."
 ```
 
 For more examples see the [examples/](examples/) directory.
