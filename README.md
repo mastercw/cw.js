@@ -44,7 +44,7 @@ Which will create `dist/cw.js` and `dist/cw.min.js`. Or you can use it from a CD
 #### jsDelivr CDN (Recommended)
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/cw@0.3.0/dist/cw.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cw@0.4.0/dist/cw.min.js"></script>
 ```
 
 or just use `latest`:
