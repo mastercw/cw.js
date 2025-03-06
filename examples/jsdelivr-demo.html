@@ -76,16 +76,20 @@ console.log(`Morse code for '8': ${morse8}`);</pre>
 
     <h2>How to Include cw.js in Your Project</h2>
     <h3>Via jsDelivr CDN:</h3>
-    <pre>&lt;script src="https://cdn.jsdelivr.net/npm/cw@0.3.0/dist/cw.min.js"&gt;&lt;/script&gt;</pre>
+    <pre>&lt;script src="https://cdn.jsdelivr.net/npm/cw@0.4.0/dist/cw.min.js"&gt;&lt;/script&gt;</pre>
 
     <h3>Via npm:</h3>
     <pre>npm install cw</pre>
 
     <h3>ES Module Import:</h3>
-    <pre>import { tdit, tfdit, codes, initAudioContext, play } from 'cw';</pre>
+    <pre>// Default import (recommended)
+import cw from 'cw';
+
+// OR named imports for tree-shaking
+import { tdit, tfdit, codes, initAudioContext, play } from 'cw';</pre>
 
     <!-- Include the library from jsDelivr -->
-    <script src="https://cdn.jsdelivr.net/npm/cw@0.3.0/dist/cw.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cw@0.4.0/dist/cw.min.js"></script>
 
     <script>
         // Initialize audio context

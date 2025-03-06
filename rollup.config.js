@@ -15,6 +15,7 @@ export default [
       file: pkg.browser,
       format: "umd",
       sourcemap: true,
+      exports: "auto" // Handle both named and default exports
     },
     plugins: [resolve(), commonjs(), typescript({ tsconfig: "./tsconfig.json" }), terser()],
   },
@@ -22,8 +23,8 @@ export default [
     input: "src/index.ts",
     external: ["cw"],
     output: [
-      { file: pkg.main, format: "cjs", sourcemap: true },
-      { file: pkg.module, format: "es", sourcemap: true },
+      { file: pkg.main, format: "cjs", sourcemap: true, exports: "auto" },
+      { file: pkg.module, format: "es", sourcemap: true, exports: "auto" },
     ],
     plugins: [typescript({ tsconfig: "./tsconfig.json" })],
   },
